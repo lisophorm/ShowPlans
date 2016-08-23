@@ -13,6 +13,7 @@
     vm.ErrorMessage = "";
 
     vm.tableLoaded = false;
+    vm.deleteTable=deleteTable;
 
     $scope.csv = {
       content: null,
@@ -96,6 +97,7 @@
     };
 
     function deleteTable(id) {
+      console.log
       csvService.remove(id).then(
         function (success) {
           renderTables();
