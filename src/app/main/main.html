@@ -1,0 +1,35 @@
+<div class="container">
+  <nav></nav>
+  <content></content>
+  <div layout="row">
+    <div layout="col-md-6">
+      <ng-csv-import
+        change="vm.calla"
+        content="csv.content"
+        header="csv.header"
+        header-visible="csv.headerVisible"
+        separator="csv.separator"
+        separator-visible="csv.separatorVisible"
+        accept="csv.accept"
+        accept-size="csv.acceptSize"
+        result="csv.result"
+        accept-size-exceed-callback="csv.exCeedFunc"
+        callback="csv.callback"
+      ></ng-csv-import>
+      <div class="errorLabel" ng-if="vm.showError">Ciao{{vm.ErrorMessage}}</div>
+    </div>
+  </div>
+
+  <div id="table-area" class="ng-cloak" ng-repeat="table in vm.tables">
+    <div layout="row">
+      table id: {{table.id}} created at {{table.createdAt}}
+    </div>
+    <csv-table data="table.data" header="table.header"></csv-table>
+    <button ng-click="vm.deleteTable(table.id)">Delete this table </button>
+    <hr/>
+  </div>
+
+
+
+
+</div>

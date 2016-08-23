@@ -1,0 +1,14 @@
+<table class="csv-table table table-striped table-hover" cellspacing="0">
+  <thead ng-if="header">
+  <tr>
+    <th ng-repeat="value in columns">{{value}}</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr ng-repeat="row in data">
+    <td ng-repeat="cell in row">
+      {{cell}}
+    </td>
+  </tr>
+  </tbody>
+</table>
