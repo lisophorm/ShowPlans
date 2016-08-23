@@ -11,9 +11,6 @@
     protocol:'http://'
 
 
-
-    //'https://ec2-52-17-125-135.eu-west-1.compute.amazonaws.com/api/admin/survey/'
-    //  http://auratrend.co.uk/
   });
 
 })();

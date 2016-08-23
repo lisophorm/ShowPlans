@@ -74,7 +74,6 @@
         var csvObject={};
         if(csv.header) {
           csvObject.header=true;
-
         } else {
           csvObject.header=false;
         }
@@ -100,7 +99,6 @@
             console.log(e);
           }
         }
-        console.log(csvArr);
         return csvArr;
       }
     });
